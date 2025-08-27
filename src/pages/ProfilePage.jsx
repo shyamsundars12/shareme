@@ -106,7 +106,7 @@ const ProfilePage = () => {
                  <div className="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden border-4 border-primary-100">
                    {user?.profilePhoto ? (
                      <img
-                       src={`http://localhost:5000${user.profilePhoto}`}
+                       src={`https://shareme-backend-pi.vercel.app/${user.profilePhoto}`}
                        alt="Profile"
                        className="w-full h-full object-cover"
                        onError={(e) => {
