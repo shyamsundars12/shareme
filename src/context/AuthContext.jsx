@@ -17,6 +17,11 @@ export const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [token, setToken] = useState(localStorage.getItem('token'));
 
+  // Configure axios base URL once
+  useEffect(() => {
+    axios.defaults.baseURL = 'https://shareme-backend-pi.vercel.app';
+  }, []);
+
   // Configure axios defaults
   useEffect(() => {
     if (token) {

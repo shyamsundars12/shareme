@@ -26,7 +26,7 @@ const NoteCard = ({ note, onDelete }) => {
 
   const handleDownload = () => {
     if (note.type === 'pdf') {
-      window.open(`https://shareme-backend-pi.vercel.app/${note.fileUrl}`, '_blank');
+      window.open(`https://shareme-backend-pi.vercel.app${note.fileUrl}`, '_blank');
     }
   };
 
